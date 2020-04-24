@@ -1,0 +1,46 @@
+package gaurav.leetcode.week4;
+
+public class BitwiseAnd {
+
+    public int rangeBitwiseAnd(int m, int n) {
+        int i = 0; // i means we have how many bits are 0 on the right
+        while(m != n){
+            m >>= 1;
+            n >>= 1;
+            i++;
+        }
+        return m << i;
+    }
+
+//    public int rangeBitwiseAnd(int m, int n) {
+//
+//        if (m == 0 || n == 0) {
+//            return 0;
+//        }
+//        long closestPow = Math.round(Math.log(m) / Math.log(2));
+//
+//        long twoPow = (long) Math.pow(2, closestPow);
+//
+//        while (twoPow <= n) {
+//            if (m < twoPow) {
+//                return 0;
+//            }
+//            twoPow *= 2;
+//        }
+//
+//        int j = m;
+//        for (int i = m + 1; i <= n; i++) {
+//            if (i == Integer.MIN_VALUE) {
+//                break;
+//            }
+//            j &= i;
+//        }
+//
+//        return j;
+//    }
+
+
+    public static void main(String[] args) {
+        System.out.println(new BitwiseAnd().rangeBitwiseAnd(3, 11));
+    }
+}
