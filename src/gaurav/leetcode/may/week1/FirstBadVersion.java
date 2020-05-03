@@ -1,5 +1,7 @@
 package gaurav.leetcode.may.week1;
 
+import java.util.Arrays;
+
 public class FirstBadVersion {
 
     public int firstBadVersion(int n) {
@@ -20,6 +22,8 @@ public class FirstBadVersion {
                 }
             }
         }
+
+        Arrays.stream(new int[]{}).max().getAsInt();
 
         return -1;
 
