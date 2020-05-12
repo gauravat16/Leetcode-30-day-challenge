@@ -22,9 +22,7 @@ public class FirstBadVersion {
                 }
             }
         }
-
-        Arrays.stream(new int[]{}).max().getAsInt();
-
+        
         return -1;
 
     }
